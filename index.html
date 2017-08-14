@@ -1,6 +1,194 @@
+<!DOCTYPE html>
 <html>
-    <title>My awesome website</title>
-    <body>
-        <p>This is where the text goes.</p>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>Fucking Code Or Something</title>
+    <style>
+    p.title{
+      font-size: 30px;
+      font-family: "Arial";
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p.summ{
+      font-size: 30px;
+      font-family: "Arial";
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+    }
+    p.int{
+      font-size: 14px;
+      font-family: "Arial";
+      color:#6b6d82;
+      max-width: 100%;
+      margin: 0 0 0 0;
+    }
+    p.intaa{
+      font-size: 14px;
+      font-family: "Arial";
+      font-weight: bold;
+      color:#6b6d82;
+      max-width: 100%;
+      margin: 0 0 0 0;
+    }
+    p.inter{
+      font-size: 10px;
+      font-family: "Arial";
+      color:#6b6d82;
+      max-width: 100%;
+      margin: 0 0 0 0;
+      font-style: italic;
+    }
+    .main{
+      margin-top: 30px;
+      margin-left: 10%;
+      padding: 0px;
+    }
+    .container{
+      width: 800px;
+      min-height: auto;
+      max-height: auto;
+      padding: 30px 30px 30px 30px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      background-color: #dbdbdb;
+    }
+    .row{
+      width: 700px;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: 0px;
+      background-color: #dbdbdb;
+    }
+    td.rowtop{
+      height: auto;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      padding: 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    td.radio{
+      height: auto;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    table.main{
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #dbdbdb;
+      margin-top: 0px;
+      width: 800px;
+    }
+    tr:hover{
+      background-color: #dbdbdb;
+    }
+    .tr{
+      background-color: #dbdbdb;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    tbody.wot{
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">Glass Tower <br /><p style="font-size: 15px; font-family:Arial; padding:0px; margin:0px; color:#6b6d82; font-weight:bold;" >Automated Human Connectedness Calculator</p>
+      <br />
+      <p class="int">So you want to see how much incredible content costs? Find it all out here with the Automated Glass Tower Human Consumption Calculator 3000</p>
+    </div>
+    <div id="container" class="container">
+      <table class="main">
+        <tbody class="wot">
+        <tr>
+            <td class="rowtop"><p class="intaa">Each button clicked will update the estimate.</p></td>
+            <td class="radio"><p class="intaa">One Off</p></td>
+            <td class="radio"><p class="intaa">6 Months</p></td>
+            <td class="radio"><p class="intaa">12 Months</p></td>
+            <td class="radio"><p class="intaa">24 Months</p></td>
+        </tr>
+        <tr>
+            <td class="rowtop"><p class="int">This is where some copy would go<br /><p class="inter">Here is the subheading</p></td>
+            <td class="radio"><input type="radio" name="first" value="10" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="first" value="20" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="first" value="30" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="first" value="40" onchange="update()"></td>
+        </tr>
+        <tr>
+            <td class="rowtop"><p class="int">This would be another option<br /><p class="inter">All the possibilities!</p></td>
+            <td class="radio"><input type="radio" name="second" value="10" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="second" value="20" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="second" value="30" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="second" value="40" onchange="update()"></td>
+        </tr>
+        <tr>
+            <td class="rowtop"><p class="int">This is just getting absurd...<br /><p class="inter">Totally agreed.</p></td>
+            <td class="radio"><input type="radio" name="third" value="10" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="third" value="20" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="third" value="30" onchange="update()"></td>
+            <td class="radio"><input type="radio" name="third" value="40" onchange="update()"></td>
+        </tr>
+      </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="container">
+        <p id="aye" class="summ">$0</p>
+    </div>
+  </body>
+
+  <script>
+  var update = function(){
+    var sum = 0;
+    var dolla = "$";
+
+    var forms = document.getElementsByClassName('radio')
+
+      for (var radio = 0; radio < forms.length; radio++){
+          var radios = forms[radio].children;
+
+          for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+              sum += parseInt(radios[i].value, 10);
+              break;
+            }
+          }
+      }
+      document.getElementById('aye').innerHTML = dolla + sum;
+  }
+
+  window.onload = function(){
+    var response = document.getElementsByID('container');
+    response.addEventListener("click", update);
+  }
+
+  </script>
+
 </html>
